@@ -1,2 +1,8 @@
 venv/
 .idea/
+
+# Terraforn
+.terraform/
+.terraform.lock.hcl
+
+.env

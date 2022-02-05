@@ -49,3 +49,16 @@ The log files in the dataset you'll be working with are partitioned by year and 
 log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 ``
+
+## Infrastructure
+
+For this project, I'll be using Amazon Web Services (AWS) to store data and run ETL pipelines. You'll be using the following services:
+- IAMRole
+- Redshift
+- S3
+
+To generate the infrastructure, I'll be using the [Terraform](https://www.terraform.io/) tool.
+```bash
+cd infra/
+terrafrom apply
+```
