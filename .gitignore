@@ -5,4 +5,6 @@ venv/
 .terraform/
 .terraform.lock.hcl
 
+dwh.cfg
+
 .env
