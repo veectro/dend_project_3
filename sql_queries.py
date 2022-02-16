@@ -24,16 +24,6 @@ staging_songs_table_create = ("""
 """)
 
 songplay_table_create = ("""
-CREATE TABLE IF NOT EXISTS songplays (
-        songplay_id INT IDENTITY(0, 1) PRIMARY KEY , 
-        start_time TIMESTAMP NOT NULL, 
-        user_id INT NOT NULL, 
-        level VARCHAR(5), 
-        song_id VARCHAR, 
-        artist_id VARCHAR, 
-        session_id INT, 
-        location VARCHAR, 
-        user_agent VARCHAR,
 """)
 
 user_table_create = ("""
