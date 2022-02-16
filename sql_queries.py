@@ -118,13 +118,13 @@ time_table_create = ("""
 # STAGING TABLES
 
 staging_events_copy = (f"""
-    COPY staging_events from '{LOG_DATA}'
+    COPY staging_events from {LOG_DATA}
     IAM_ROLE '{REDSHIFT_ARN}'
-    FORMAT AS JSON '{LOG_JSONPATH}';
+    FORMAT AS JSON {LOG_JSONPATH};
 """)
 
 staging_songs_copy = (f"""
-    COPY staging_songs from '{SONG_DATA}'
+    COPY staging_songs from {SONG_DATA}
     IAM_ROLE '{REDSHIFT_ARN}'
     FORMAT AS JSON 'AUTO';
 """)
