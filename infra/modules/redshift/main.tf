@@ -11,7 +11,7 @@ resource "aws_redshift_cluster" "default" {
 
 resource "random_password" "password" {
   length           = 16
-  special          = true
+  special          = false
   min_numeric      = 1
-  override_special = "[/@\"']"
+  min_upper        = 1
 }

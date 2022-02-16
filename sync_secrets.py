@@ -5,7 +5,7 @@ import json
 import shutil
 
 AWS_PROFILE = 'udacity'
-AWS_REGION = 'us-east-1'
+AWS_REGION = 'us-west-1'
 SECRET_NAME = 'udacity_dend_secret'
 
 
