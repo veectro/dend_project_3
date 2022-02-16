@@ -64,3 +64,7 @@ To generate the infrastructure, I'll be using the [Terraform](https://www.terraf
 cd infra/
 terrafrom apply
 ```
+
+## Running the application
+1. Make sure `~/.aws/credentials` is set to `udacity`, otherwise change the variable `AWS_PROFILE` in `sync_secret.py`
+2. Run sync_secret.py to sync the AWS secrets to the `dwh.cfg` file. (It will generate automatically if it doesn't exist from the template file)
