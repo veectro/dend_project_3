@@ -57,6 +57,8 @@ For this project, I'll be using Amazon Web Services (AWS) to store data and run 
 - Redshift
 - S3
 
+Make sure that aws profile in `~/.aws/credentials` is set to `udacity`.
+
 To generate the infrastructure, I'll be using the [Terraform](https://www.terraform.io/) tool.
 ```bash
 cd infra/
