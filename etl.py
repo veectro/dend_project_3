@@ -4,13 +4,25 @@ from sql_queries import copy_table_queries, insert_table_queries
 
 
 def load_staging_tables(cur, conn):
+    """
+    Loading data from S3 to staging tables in Redshift cluster
+    :param cur: psycopg2 cursor
+    :param conn: psycopg2 connection
+    :return: None
+    """
     for query in copy_table_queries:
-
         cur.execute(query)
         conn.commit()
 
 
 def insert_tables(cur, conn):
+    """
+    Inserting data into the tables in the Redshift cluster
+
+    :param cur: psycopg2 cursor
+    :param conn: psycopg2 connection
+    :return: None
+    """
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
@@ -24,7 +36,7 @@ def main():
     cur = conn.cursor()
     
     load_staging_tables(cur, conn)
-    #insert_tables(cur, conn)
+    insert_tables(cur, conn)
 
     conn.close()
 

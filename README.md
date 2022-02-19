@@ -97,5 +97,11 @@ terrafrom apply
 ```
 
 ## Running the application
-1. Make sure `~/.aws/credentials` is set to `udacity`, otherwise change the variable `AWS_PROFILE` in `sync_secret.py`
-2. Run sync_secret.py to sync the AWS secrets to the `dwh.cfg` file. (It will generate automatically if it doesn't exist from the template file)
+1. Fill out the `dwh.cfg` file with your AWS credentials. It could be done in 2 ways:
+   1. By creating infrastructure yourself and sync secrets to your local machine.
+      - Make sure `~/.aws/credentials` is set to `udacity`, otherwise change the variable `AWS_PROFILE` in `sync_secret.py`
+      - Run sync_secret.py to sync the AWS secrets to the `dwh.cfg` file. (It will generate automatically if it doesn't exist from the template file)
+   2. By filling out manually.
+
+2. Run `python create_tables.py` to create the tables in Redshift.
+3. Run `python etl.py` to load data from S3 to Redshift.

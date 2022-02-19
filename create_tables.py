@@ -4,12 +4,24 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """
+    Drops all tables in the database
+    :param cur: psycopg2 cursor
+    :param conn: psycopg2 connection
+    :return: None
+    """
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    """
+    Creates all tables in the database
+    :param cur: psycopg2 cursor
+    :param conn: psycopg2 connection
+    :return: None
+    """
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
