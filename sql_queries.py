@@ -181,12 +181,12 @@ time_table_insert = ("""
     )
     SELECT 
         date_add('ms',e.ts,'1970-01-01') AS start_time,
-        EXTRACT(hour from e.start_time) AS hour,
-        EXTRACT(day from e.start_time) AS day,
-        EXTRACT(week from e.start_time) AS week,
-        EXTRACT(month from e.start_time) AS month,
-        EXTRACT(year from e.start_time) AS year,
-        EXTRACT(dow from e.start_time) AS weekday    
+        EXTRACT(hour from start_time) AS hour,
+        EXTRACT(day from start_time) AS day,
+        EXTRACT(week from start_time) AS week,
+        EXTRACT(month from start_time) AS month,
+        EXTRACT(year from start_time) AS year,
+        EXTRACT(dow from start_time) AS weekday    
     FROM staging_events e;
 """)
 
